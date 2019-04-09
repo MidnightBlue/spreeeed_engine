@@ -16,7 +16,7 @@ module DatatableExtension
     end
 
     def datatable_default_sortable_cols
-      [[:id, :ASC]]
+      [[:id, :DESC]]
     end
 
     def datatable_searchable_cols

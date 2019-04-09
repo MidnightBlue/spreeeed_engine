@@ -38,20 +38,10 @@ module SpreeeedEngine
         :path     => root_path,
       }
 
-      menu[SpreeeedEngine::FakeObject.model_name.human.to_sym] = {
-        :icon_css => SpreeeedEngine::FakeObject.icon,
-        :path     => SpreeeedEngine::Engine.routes.url_helpers.fake_objects_path,
+      menu[t('operations.sign_out').to_sym] = {
+        :icon_css => 'fa-sign-out',
+        :path     => send("destroy_#{SpreeeedEngine.devise_auth_resource}_session_path"),
       }
-
-      menu[SpreeeedEngine::FakePhoto.model_name.human.to_sym] = {
-        :icon_css => SpreeeedEngine::FakePhoto.icon,
-        :path     => SpreeeedEngine::Engine.routes.url_helpers.fake_photos_path,
-      }
-
-      # menu[t('operations.sign_out').to_sym] = {
-      #   :icon_css => 'fa-sign-out',
-      #   :path     => send("destroy_#{SpreeeedEngine.devise_auth_resource}_session_path"),
-      # }
 
       menu
     end
