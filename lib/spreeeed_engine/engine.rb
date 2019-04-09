@@ -69,10 +69,10 @@ module SpreeeedEngine
 
     config.time_zone = SpreeeedEngine.default_time_zone
 
-    config.i18n.load_path += Dir["#{config.root}/config/locales/**/*.yml"]
-    SpreeeedEngine.path = config.i18n.load_path
-    config.i18n.available_locales SpreeeedEngine.available_locales
-    config.i18n.default_locale = SpreeeedEngine.default_locale
+    config.i18n.load_path         += Dir["#{config.root}/config/locales/**/*.yml"]
+    SpreeeedEngine.path           = config.i18n.load_path
+    config.i18n.available_locales = SpreeeedEngine.available_locales
+    config.i18n.default_locale    = SpreeeedEngine.default_locale
 
     # config.action_controller.include_all_helpers = false
 
