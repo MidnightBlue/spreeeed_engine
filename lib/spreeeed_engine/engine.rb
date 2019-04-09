@@ -60,12 +60,13 @@ module SpreeeedEngine
   class Engine < ::Rails::Engine
     engine_name 'spreeeed_engine'
 
-    config.time_zone = 'Taipei'
+    config.time_zone = SpreeeedEngine.default_time_zone
 
     config.i18n.load_path += Dir["#{config.root}/config/locales/**/*.yml"]
     SpreeeedEngine.path = config.i18n.load_path
-    # config.i18n.available_locales ||= [:en, :'zh-TW']
-    config.i18n.default_locale = SpreeeedEngine.locale
+    config.i18n.available_locales SpreeeedEngine.available_locales
+    config.i18n.default_locale = SpreeeedEngine.default_locale
+
     # config.action_controller.include_all_helpers = false
 
 
