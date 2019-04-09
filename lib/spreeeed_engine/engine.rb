@@ -49,7 +49,9 @@ module SpreeeedEngine
     mattr_accessor :devise_auth_resource, :namespace, :locale, :path
     self.devise_auth_resource = 'user'
     self.namespace            = 'admin'
-    self.locale               = :en
+    self.default_locale       = :en
+    self.available_locales    = [:en, :'zh-TW']
+    self.default_time_zone    = 'Taipei'
   end
 
   def self.setup(&block)
