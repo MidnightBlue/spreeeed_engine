@@ -1,0 +1,30 @@
+---
+zh-CN:
+  operations:
+    save: 储存
+    save_changes: 更新
+    cancel: 取消
+    edit: 编辑
+    destroy: 删除
+    back: 返回
+    new: 新增
+    frontend_view: 前台显示
+    search: 搜寻
+    choose: 请选择
+    choose_cover: 选择封面
+    choose_photo: 选择照片
+    remove_photo: 移除照片
+    choose_file: 选择档案
+    remove_file: 移除档案
+    upload: 上传
+    remark: 备注
+    operations: 操作
+    change: 更换
+    sign_in: 登入
+    sign_out: 登出
+    select_one: "请选择..."
+    sign_in_please: 请登入
+    password: 密码
+    remember_me: 记住我
+    no_attachments: "目前无任何附件。"
+    no_comments: "目前无任何备注"

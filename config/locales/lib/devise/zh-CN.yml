@@ -1,0 +1,76 @@
+---
+zh-CN:
+  devise:
+    confirmations:
+      user:
+        confirmed: 您的帐号已经通过确认。
+        send_instructions: 您将在几分钟后收到一封电子邮件，内有确认帐号的步骤说明。
+        send_paranoid_instructions: 如果此电子邮件信箱真存在于资料库中的话，您将在几分钟后收到一封电子邮件， 说明确认帐号的手续。
+    failure:
+      user:
+        already_authenticated: 您已经登入。
+        inactive: 您的帐号尚未被启用。
+        invalid: Email 或密码是无效的。
+        last_attempt: 帐号锁定前的最后一次尝试。
+        locked: 您的帐号已被锁定。
+        not_found_in_database: Email 或密码是无效的。
+        timeout: 您的登入时效过期，请重新登入，才能继续。
+        unauthenticated: 您需要先注册或登入后才能继续。
+        unconfirmed: 您的帐号需需要经过确认后，才能继续。
+    mailer:
+      user:
+        confirmation_instructions:
+          subject: 确认步骤
+        reset_password_instructions:
+          subject: 重设密码步骤
+        unlock_instructions:
+          subject: 解锁步骤
+    omn​​iauth_callbacks:
+      user:
+        failure: 因为「%{reason}」，无法认证您的 %{kind} 帐户
+        success: 已成功认证您的 %{kind} 帐户
+    passwords:
+      user:
+        no_token: 您暂时不能访问此页面。您需要通过密码重置邮件中的重置链接来访问此页面，如果您正是通过重置链接访问，请确定链接的正确性。
+        send_instructions: 您将在几分钟后收到一封电子邮件，内有重新设定密码的步骤说明。
+        send_paranoid_instructions: 如果此电子邮件信箱真存在于资料库中的话，您将在几分钟后收到一封电子邮件，内有回复密码专用的网址。
+        updated: 您的密码已被修改，而您现在已重新登入。
+        updated_not_active: 您的密码已被修改。
+    registrations:
+      user:
+        destroyed: 再会！您的帐号已被注销。有缘再会。
+        signed_up: 欢迎！您已经成功注册。
+        signed_up_but_inactive: 您已经成功注册。但因帐号尚未启用，目前暂时不能登入。
+        signed_up_but_locked: 您已经成功注册。可是，因为帐号被锁住，目前暂时不能登入。
+        signed_up_but_unconfirmed: 已传送帐号确认信件至您的 Email 信箱，请收信、并点击信中确认网址，以便启用您的帐号。
+        update_needs_confirmation: 您的帐号资料已成功更新，但您的新 Email 信箱需要再次被确认。请收信、并点击信中确认用的网址，以便完成信箱确认手续。
+        updated: 您已经成功的更新帐号资讯。
+    user_registrations:
+      user:
+        destroyed: 再会！您的帐号已被注销。有缘再会。
+        signed_up: 欢迎！您已经成功注册。
+        signed_up_but_inactive: 您已经成功注册。但因帐号尚未启用，目前暂时不能登入。
+        signed_up_but_locked: 您已经成功注册。可是，因为帐号被锁住，目前暂时不能登入。
+        signed_up_but_unconfirmed: 已传送帐号确认信件至您的 Email 信箱，请收信、并点击信中确认网址，以便启用您的帐号。
+        update_needs_confirmation: 您的帐号资料已成功更新，但您的新 Email 信箱需要再次被确认。请收信、并点击信中确认用的网址，以便完成信箱确认手续。
+        updated: 您已经成功的更新帐号资讯。
+    user_sessions:
+      user:
+        signed_in: 成功登入了。
+        signed_out: 成功登出了。
+    unlocks:
+      user:
+        send_instructions: 您将在几分钟后收到一封电子邮件，内有将帐号解除锁定的步骤说明。
+        send_paranoid_instructions: 如果此帐号真的存在的话，您将在几分钟后收到一封电子邮件，内有将帐号解除锁定的步骤说明。
+        unlocked: 您的帐号已被解锁，现在您已成功登入。
+  errors:
+    messages:
+      user:
+        already_confirmed: 已被确认过了，请试着登入看看
+        confirmation_period_expired: 需要在%{period}以内确认，请再要一个新的。
+        expired: 已经过期了，请再要一个新的
+        not_found: 没有找到
+        not_locked: 被锁定了
+        not_saved:
+          one: 有一个错误导致%{resource}不能被储存：
+          other: 有 %{count} 个错误导致%{resource}不能被储存：
