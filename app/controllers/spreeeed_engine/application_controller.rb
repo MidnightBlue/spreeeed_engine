@@ -9,10 +9,13 @@ module SpreeeedEngine
 
     PER_PAGE = 10
 
-    before_action :"authenticate_#{SpreeeedEngine.devise_auth_resource}!", :set_klass, :set_klass_key
+    before_action :"authenticate_#{SpreeeedEngine.devise_auth_resource}!",
+                  :set_klass,
+                  :set_klass_key,
+                  :set_locale
 
     before_action :set_active_record_config, only: [:index, :new, :show, :edit, :create, :update]
-    before_action :set_datatables_config, only: [:index, :show]
+    before_action :set_datatables_config,    only: [:index, :show]
 
 
     def index
@@ -183,6 +186,9 @@ module SpreeeedEngine
       @datatable_config[@klass_key][:default_sortable_cols]   = @klass.datatable_default_sortable_cols
     end
 
+    def set_locale
+      I18n.locale = params[:locale] || SpreeeedEngine.default_locale || I18n.default_locale
+    end
 
 
   end
