@@ -186,10 +186,25 @@ module SpreeeedEngine
       @datatable_config[@klass_key][:default_sortable_cols]   = @klass.datatable_default_sortable_cols
     end
 
+
     def set_locale
-      I18n.locale = params[:locale] || SpreeeedEngine.default_locale || I18n.default_locale
+      locale = params[:locale] ||                                # Request parameter
+        session[:locale] ||                                       # Current session
+        (current_user.try(:preferred_locale) if current_user) ||  # Model saved configuration
+        SpreeeedEngine.default_locale ||
+        extract_locale_from_accept_language_header ||             # Language header - browser config
+        I18n.default_locale                                       # Set in your config files, english by super-default
+
+      I18n.locale = I18n.available_locales.map(&:to_s).include?(locale) ? locale : I18n.default_locale
+
     end
 
+    # Extract language from request header
+    def extract_locale_from_accept_language_header
+      if request.env['HTTP_ACCEPT_LANGUAGE']
+        request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/).first.to_sym
+      end
+    end
 
   end
 end
