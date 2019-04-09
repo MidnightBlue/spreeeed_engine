@@ -46,7 +46,12 @@ module SpreeeedEngine
 
 
   class << self
-    mattr_accessor :devise_auth_resource, :namespace, :locale, :path
+    mattr_accessor :devise_auth_resource,
+                   :namespace,
+                   :default_locale,
+                   :available_locales,
+                   :default_time_zone,
+                   :path
     self.devise_auth_resource = 'user'
     self.namespace            = 'admin'
     self.default_locale       = :en
