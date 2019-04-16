@@ -54,6 +54,10 @@ zh-CN:
         signed_up_but_unconfirmed: 已传送帐号确认信件至您的 Email 信箱，请收信、并点击信中确认网址，以便启用您的帐号。
         update_needs_confirmation: 您的帐号资料已成功更新，但您的新 Email 信箱需要再次被确认。请收信、并点击信中确认用的网址，以便完成信箱确认手续。
         updated: 您已经成功的更新帐号资讯。
+    sessions:
+      user:
+        signed_in: 成功登入了。
+        signed_out: 成功登出了。
     user_sessions:
       user:
         signed_in: 成功登入了。
